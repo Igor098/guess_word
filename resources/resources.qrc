@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>book_icon.svg</file>
+    <file>close_icon.svg</file>
+    <file>play_icon.svg</file>
+    <file>trophy_icon.svg</file>
+  </qresource>
+  <qresource prefix="fonts">
+    <file>fonts/NunitoSans-Black.ttf</file>
+    <file>fonts/NunitoSans-Bold.ttf</file>
+    <file>fonts/NunitoSans-ExtraBold.ttf</file>
+    <file>fonts/NunitoSans-ExtraLight.ttf</file>
+    <file>fonts/NunitoSans-Light.ttf</file>
+    <file>fonts/NunitoSans-Regular.ttf</file>
+    <file>fonts/NunitoSans-SemiBold.ttf</file>
+  </qresource>
+</RCC>
