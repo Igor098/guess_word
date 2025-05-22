@@ -104,16 +104,6 @@ QLabel {
 	selection-background-color: rgb(172, 171, 165);
 }</string>
         </property>
-        <item>
-         <property name="text">
-          <string>awdawd</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>sdasds</string>
-         </property>
-        </item>
        </widget>
       </item>
       <item>
@@ -130,27 +120,63 @@ QLabel {
        </spacer>
       </item>
       <item>
-       <widget class="QDialogButtonBox" name="selectCategoryButtons">
+       <widget class="QFrame" name="selectBtnWrapper">
         <property name="styleSheet">
-         <string notr="true">QDialogButtonBox {
+         <string notr="true">QPushButton {
 	background-color: #2BAD80;
-	padding: 12px 24px;
-	border-radius: 12px;
+	padding: 8px 12px;
+	border-radius: 8px;
 	font-family: &quot;NunitoSans&quot;;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 400;
 	color: #EDEBD6;
+}
+
+QPushButton:hover{
+	background-color: rgb(47, 193, 142);
+}
+
+QPushButton:pressed{
+background-color: rgb(39, 158, 116);
 }</string>
         </property>
-        <property name="orientation">
-         <enum>Qt::Orientation::Horizontal</enum>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
         </property>
-        <property name="standardButtons">
-         <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
         </property>
-        <property name="centerButtons">
-         <bool>true</bool>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>16</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="selectBtnOk">
+           <property name="text">
+            <string>ОК</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="selectBtnCancel">
+           <property name="text">
+            <string>Отмена</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>
@@ -161,38 +187,5 @@ QLabel {
  <resources>
   <include location="../resources/resources.qrc"/>
  </resources>
- <connections>
-  <connection>
-   <sender>selectCategoryButtons</sender>
-   <signal>accepted()</signal>
-   <receiver>selectCategory</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>157</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>selectCategoryButtons</sender>
-   <signal>rejected()</signal>
-   <receiver>selectCategory</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>286</x>
-     <y>274</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

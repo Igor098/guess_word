@@ -16,7 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
-    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
+    QProgressBar, QSizePolicy, QSpacerItem, QVBoxLayout,
+    QWidget)
 
 class Ui_loadingPage(object):
     def setupUi(self, loadingPage):
@@ -73,6 +74,7 @@ class Ui_loadingPage(object):
 "	font-size: 32px ;\n"
 "	padding: 16px;\n"
 "	font-weight: 600;\n"
+"	color: #FEF5D6;\n"
 "}")
         self.loadingTitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
@@ -99,7 +101,9 @@ class Ui_loadingPage(object):
         self.loadingContent.setFrameShape(QFrame.Shape.StyledPanel)
         self.loadingContent.setFrameShadow(QFrame.Shadow.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.loadingContent)
+        self.verticalLayout_3.setSpacing(24)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 24, 0, 0)
         self.connectLb = QLabel(self.loadingContent)
         self.connectLb.setObjectName(u"connectLb")
         self.connectLb.setStyleSheet(u"#connectLb {\n"
@@ -110,7 +114,34 @@ class Ui_loadingPage(object):
 "}")
         self.connectLb.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.verticalLayout_3.addWidget(self.connectLb, 0, Qt.AlignmentFlag.AlignTop)
+        self.verticalLayout_3.addWidget(self.connectLb)
+
+        self.loadingProgress = QProgressBar(self.loadingContent)
+        self.loadingProgress.setObjectName(u"loadingProgress")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.loadingProgress.sizePolicy().hasHeightForWidth())
+        self.loadingProgress.setSizePolicy(sizePolicy1)
+        self.loadingProgress.setStyleSheet(u"#loadingProgress {\n"
+"	margin: 0 64px;\n"
+"	border-radius: 4px;\n"
+"	background-color: #FFFDF4;\n"
+"}\n"
+"\n"
+"#loadingProgress::chunk {\n"
+"        background-color:  #F59428;\n"
+"		border-radius: 4px;\n"
+"    }")
+        self.loadingProgress.setMaximum(0)
+        self.loadingProgress.setValue(-1)
+        self.loadingProgress.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_3.addWidget(self.loadingProgress)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout_3.addItem(self.verticalSpacer)
 
 
         self.verticalLayout_2.addWidget(self.loadingContent)

@@ -121,6 +121,7 @@
 	font-size: 32px ;
 	padding: 16px;
 	font-weight: 600;
+	color: #FEF5D6;
 }</string>
               </property>
               <property name="text">

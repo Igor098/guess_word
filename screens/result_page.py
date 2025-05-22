@@ -73,6 +73,7 @@ class Ui_resultPage(object):
 "	font-size: 32px ;\n"
 "	padding: 16px;\n"
 "	font-weight: 600;\n"
+"	color: #FEF5D6;\n"
 "}")
         self.resultTitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
 

@@ -76,10 +76,6 @@ class SelectCategoryDialog(QDialog, Ui_selectCategory):
         self.categories = []
 
         self.thread = CategoryRequestThread()
-
-        self.thread.data_received.connect(self.set_categories)
-        self.thread.error_occurred.connect(self.show_error)
-
         self.thread.start()
 
     @Slot(dict)
@@ -89,10 +85,6 @@ class SelectCategoryDialog(QDialog, Ui_selectCategory):
 
         self.categoriesCb.addItems(self.categories)
 
-    @Slot(str)
-    def show_error(self, error):
-        print("Произошла ошибка:", error)
-
 
 class MainPage(QWidget, Ui_mainPage):
     def __init__(self):
@@ -100,7 +92,7 @@ class MainPage(QWidget, Ui_mainPage):
         self.setupUi(self)
 
         self.btnMainCategory.clicked.connect(self.select_category)
-
+        
     def select_category(self):
         self.dialog = SelectCategoryDialog()
         self.dialog.show()

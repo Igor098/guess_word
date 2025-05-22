@@ -1,0 +1,142 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'selectCategoryDialog.ui'
+##
+## Created by: Qt User Interface Compiler version 6.9.0
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize)
+from PySide6.QtWidgets import (QComboBox, QFrame,
+                               QHBoxLayout, QLabel, QPushButton, QSizePolicy,
+                               QSpacerItem, QVBoxLayout, QWidget)
+
+
+class Ui_selectCategory(object):
+    def setupUi(self, selectCategory):
+        if not selectCategory.objectName():
+            selectCategory.setObjectName(u"selectCategory")
+        selectCategory.resize(300, 150)
+        selectCategory.setMinimumSize(QSize(300, 150))
+        selectCategory.setMaximumSize(QSize(400, 400))
+        selectCategory.setStyleSheet(u"#selectCategory{\n"
+"	background-color: #FFC13A;\n"
+"}")
+        self.verticalLayout_2 = QVBoxLayout(selectCategory)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.selectCategoryWidget = QWidget(selectCategory)
+        self.selectCategoryWidget.setObjectName(u"selectCategoryWidget")
+        self.selectCategoryWidget.setStyleSheet(u"#selectCategoryWidget{\n"
+"	background-color: #FFC13A;\n"
+"}\n"
+"\n"
+"QLabel {\n"
+"	font-family: \"NunitoSans\";\n"
+"	font-size: 20px;\n"
+"	font-weight: 600;\n"
+"	color: #1C1C1C;\n"
+"}")
+        self.verticalLayout = QVBoxLayout(self.selectCategoryWidget)
+        self.verticalLayout.setSpacing(12)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.selectCategoryLb = QLabel(self.selectCategoryWidget)
+        self.selectCategoryLb.setObjectName(u"selectCategoryLb")
+
+        self.verticalLayout.addWidget(self.selectCategoryLb)
+
+        self.categoriesCb = QComboBox(self.selectCategoryWidget)
+        self.categoriesCb.setObjectName(u"categoriesCb")
+        self.categoriesCb.setStyleSheet(u"#categoriesCb {\n"
+"	alternate-background-color: rgb(141, 140, 135);\n"
+"	background-color: #FFF6D5;\n"
+"	border-radius: 8px;\n"
+"	padding: 8px 12px;\n"
+"\n"
+"	font-family: \"NunitoSans\";\n"
+"	font-size: 16px;\n"
+"	font-weight: 400;\n"
+"	color: #1C1C1C;\n"
+"}\n"
+"\n"
+"#categoriesCb::down-arrow {\n"
+"			width: 12px;\n"
+"            image: url(':icons/down-arrow.png');\n"
+"        }\n"
+"\n"
+"#categoriesCb::drop-down {\n"
+"	background-color: rgb(238, 230, 199);\n"
+"	border-bottom-right-radius: 8px;\n"
+"	border-top-right-radius: 8px;\n"
+"}\n"
+"\n"
+"#categoriesCb QAbstractItemView {\n"
+"	background-color: #FFFDF4;\n"
+"	color: #1C1C1C;\n"
+"	border-radius: 4px;\n"
+"	selection-background-color: rgb(172, 171, 165);\n"
+"}")
+
+        self.verticalLayout.addWidget(self.categoriesCb)
+
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+
+        self.verticalLayout.addItem(self.verticalSpacer)
+
+        self.selectBtnWrapper = QFrame(self.selectCategoryWidget)
+        self.selectBtnWrapper.setObjectName(u"selectBtnWrapper")
+        self.selectBtnWrapper.setStyleSheet(u"QPushButton {\n"
+"	background-color: #2BAD80;\n"
+"	padding: 8px 12px;\n"
+"	border-radius: 8px;\n"
+"	font-family: \"NunitoSans\";\n"
+"	font-size: 20px;\n"
+"	font-weight: 400;\n"
+"	color: #EDEBD6;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"	background-color: rgb(47, 193, 142);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(39, 158, 116);\n"
+"}")
+        self.selectBtnWrapper.setFrameShape(QFrame.Shape.StyledPanel)
+        self.selectBtnWrapper.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout = QHBoxLayout(self.selectBtnWrapper)
+        self.horizontalLayout.setSpacing(16)
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.selectBtnOk = QPushButton(self.selectBtnWrapper)
+        self.selectBtnOk.setObjectName(u"selectBtnOk")
+
+        self.horizontalLayout.addWidget(self.selectBtnOk)
+
+        self.selectBtnCancel = QPushButton(self.selectBtnWrapper)
+        self.selectBtnCancel.setObjectName(u"selectBtnCancel")
+
+        self.horizontalLayout.addWidget(self.selectBtnCancel)
+
+
+        self.verticalLayout.addWidget(self.selectBtnWrapper)
+
+
+        self.verticalLayout_2.addWidget(self.selectCategoryWidget)
+
+
+        self.retranslateUi(selectCategory)
+
+        QMetaObject.connectSlotsByName(selectCategory)
+    # setupUi
+
+    def retranslateUi(self, selectCategory):
+        selectCategory.setWindowTitle(QCoreApplication.translate("selectCategory", u"Dialog", None))
+        self.selectCategoryLb.setText(QCoreApplication.translate("selectCategory", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044e:", None))
+        self.selectBtnOk.setText(QCoreApplication.translate("selectCategory", u"\u041e\u041a", None))
+        self.selectBtnCancel.setText(QCoreApplication.translate("selectCategory", u"\u041e\u0442\u043c\u0435\u043d\u0430", None))
+    # retranslateUi
+
